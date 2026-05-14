@@ -20,4 +20,4 @@ cd "$CLAUDE_DIR"
 ln -snf ../skills skills
 ln -snf ../commands commands
 
-echo "✓ Claude C
+echo "✓ Claude Code directories synced"
