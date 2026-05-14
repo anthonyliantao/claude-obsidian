@@ -1,5 +1,7 @@
 # claude-obsidian — Claude + Obsidian Wiki Vault
 
+**语言：** 所有互动一律使用中文。
+
 This folder is both a Claude Code plugin and an Obsidian vault.
 
 **Plugin name:** `claude-obsidian`

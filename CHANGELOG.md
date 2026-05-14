@@ -7,6 +7,7 @@ All notable changes to claude-obsidian. Format: [Keep a Changelog](https://keepa
 ### Changed
 
 - `bin/setup-vault.sh`: source documents directory moved from hidden `.raw/` to visible `raw/`; `.raw` is now a symlink pointing to `raw` so existing references remain valid. Re-running setup on an existing vault migrates `.raw/` automatically.
+- `CLAUDE.md`: all interactions now conducted in Chinese.
 
 ## [1.6.0] - 2026-04-24
 
