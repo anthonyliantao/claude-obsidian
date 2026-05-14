@@ -14,7 +14,18 @@ echo "Setting up claude-obsidian vault at: $VAULT"
 
 # ── 1. Create directories ─────────────────────────────────────────────────────
 mkdir -p "$OBSIDIAN/snippets"
-mkdir -p "$VAULT/.raw"
+
+# Migrate .raw → raw and keep .raw as a symlink
+if [ -d "$VAULT/.raw" ] && [ ! -L "$VAULT/.raw" ]; then
+  echo "Migrating .raw/ → raw/ ..."
+  mv "$VAULT/.raw" "$VAULT/raw"
+fi
+mkdir -p "$VAULT/raw"
+if [ ! -L "$VAULT/.raw" ]; then
+  ln -s raw "$VAULT/.raw"
+  echo "✓ Created symlink .raw → raw"
+fi
+
 mkdir -p "$VAULT/wiki/concepts" "$VAULT/wiki/entities" "$VAULT/wiki/sources" "$VAULT/wiki/meta"
 mkdir -p "$VAULT/_templates"
 
