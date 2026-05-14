@@ -2,6 +2,12 @@
 
 All notable changes to claude-obsidian. Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning: [SemVer](https://semver.org/).
 
+## [1.6.1] - 2026-05-14
+
+### Changed
+
+- `bin/setup-vault.sh`: source documents directory moved from hidden `.raw/` to visible `raw/`; `.raw` is now a symlink pointing to `raw` so existing references remain valid. Re-running setup on an existing vault migrates `.raw/` automatically.
+
 ## [1.6.0] - 2026-04-24
 
 ### Added (DragonScale Mechanism 4, opt-in)
